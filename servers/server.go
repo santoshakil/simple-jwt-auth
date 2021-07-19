@@ -2,14 +2,15 @@ package servers
 
 import (
 	"fmt"
-	"github.com/casbin/casbin/persist/file-adapter"
+	"log"
+	"net/http"
+	"os"
+
+	fileadapter "github.com/casbin/casbin/persist/file-adapter"
 	"github.com/gin-gonic/gin"
 	"github.com/go-redis/redis/v7"
 	"github.com/joho/godotenv"
 	"github.com/simple-jwt-auth/auth"
-	"log"
-	"net/http"
-	"os"
 )
 
 type Server struct {
@@ -55,8 +56,8 @@ func (server *Server) Run(addr string) {
 
 func Run() {
 	HttpServer = Server{}
-	var err error
-	err = godotenv.Load()
+	// var err error
+	err := godotenv.Load()
 	if err != nil {
 		log.Fatalf("Error getting env, not comming through %v", err)
 	} else {

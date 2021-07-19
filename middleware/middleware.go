@@ -2,12 +2,13 @@ package middleware
 
 import (
 	"fmt"
+	"log"
+	"net/http"
+
 	"github.com/casbin/casbin"
 	"github.com/casbin/casbin/persist"
 	"github.com/gin-gonic/gin"
 	"github.com/simple-jwt-auth/auth"
-	"log"
-	"net/http"
 )
 
 func TokenAuthMiddleware() gin.HandlerFunc {

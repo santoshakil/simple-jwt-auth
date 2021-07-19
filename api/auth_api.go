@@ -2,13 +2,14 @@ package api
 
 import (
 	"fmt"
+	"net/http"
+	"os"
+	"strconv"
+
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 	"github.com/simple-jwt-auth/auth"
 	"github.com/simple-jwt-auth/models"
-	"net/http"
-	"os"
-	"strconv"
 )
 
 var tokenManager = auth.TokenManager{}

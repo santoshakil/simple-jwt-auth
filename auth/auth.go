@@ -3,8 +3,9 @@ package auth
 import (
 	"errors"
 	"fmt"
-	"github.com/go-redis/redis/v7"
 	"time"
+
+	"github.com/go-redis/redis/v7"
 )
 
 type AccessDetails struct {

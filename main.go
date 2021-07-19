@@ -1,9 +1,10 @@
 package main
 
 import (
+	"log"
+
 	"github.com/joho/godotenv"
 	"github.com/simple-jwt-auth/servers"
-	"log"
 )
 
 func init() {
@@ -11,7 +12,6 @@ func init() {
 		log.Print("No .env file found")
 	}
 }
-
 
 func main() {
 	servers.Run()

@@ -1,10 +1,11 @@
 package api
 
 import (
+	"net/http"
+
 	"github.com/gin-gonic/gin"
 	"github.com/simple-jwt-auth/auth"
 	"github.com/simple-jwt-auth/models"
-	"net/http"
 )
 
 func CreateTodo(c *gin.Context) {
